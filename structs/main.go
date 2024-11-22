@@ -14,14 +14,14 @@ type UserDetails struct {
 }
 
 func main() {
-	user1 := User{
+	user1 := &User{
 		id:      1,
 		name:    "Yılmaz Ev",
 		age:     19,
 		details: UserDetails{address: "İstanbul"},
 	}
 
-	changeName(&user1, "Mehmet Cengiz")
+	changeName(user1, "Mehmet Cengiz")
 	fmt.Println(user1)
 }
 
